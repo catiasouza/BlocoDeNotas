@@ -1,18 +1,29 @@
-//
-//  ViewController.swift
-//  Tarefas
-//
-//  Created by Catia Miranda de Souza on 15/10/19.
-//  Copyright © 2019 Catia Miranda de Souza. All rights reserved.
-//
+
 
 import UIKit
 
 class ViewController: UIViewController {
+    
 
+    @IBOutlet weak var textCampo: UITextView!
+    let chave = "anotacao"
+    
+    @IBAction func salvarAnotacao(_ sender: Any) {
+        
+        if  let texto = textCampo.text{
+            UserDefaults.standard.set(texto, forKey: chave)
+        }
+    }
+    func recuperAnotacao() -> String {
+        if let  textoRecuperado = UserDefaults.standard.object(forKey: chave){
+            return textoRecuperado as! String
+        }
+        return ""
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        textCampo.text = recuperAnotacao()
     }
 
 

@@ -31,6 +31,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jt3-ng-nkf">
                                         <rect key="frame" x="0.0" y="313" width="335" height="38"/>
                                         <state key="normal" image="botao_salvar"/>
+                                        <connections>
+                                            <action selector="salvarAnotacao:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qtt-xU-lmL"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -51,6 +54,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Minhas Anotacoes" id="M3L-Bi-MGR"/>
+                    <connections>
+                        <outlet property="textCampo" destination="A5Q-uL-vId" id="arh-qd-fec"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
