@@ -20,6 +20,16 @@ class ViewController: UIViewController {
         }
         return ""
     }
+    
+    // REMOVER A BARRA DE STATUS
+    override var prefersStatusBarHidden: Bool{
+        return true
+    }
+    
+    // teclado...true entende q vc terminou de teclar e esconde o teclado
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
